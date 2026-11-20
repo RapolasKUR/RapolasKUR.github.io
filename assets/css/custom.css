@@ -1,0 +1,379 @@
+
+/* ==========================================
+   9 LABORATORINIS DARBAS
+   Rapolas Kurapkaitis - CV svetaine
+   ========================================== */
+
+/* 1. SRIFTAI, ANTRASTES IR PASTRAIPOS */
+
+body {
+  --default-font: "Segoe UI", Arial, sans-serif;
+  --heading-font: Georgia, "Times New Roman", serif;
+  font-family: var(--default-font);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: #58c4e8;
+  letter-spacing: 0.5px;
+}
+
+h1 { font-size: 42px; }
+h2 { font-size: 34px; }
+h3 { font-size: 27px; }
+h4 { font-size: 22px; }
+h5 { font-size: 19px; }
+h6 { font-size: 16px; }
+
+p {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.2px;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #58c4e8;
+  margin-bottom: 20px;
+}
+
+/* 2. MYGTUKAI IR NUORODOS */
+
+.btn,
+.btn-ghost,
+.link-underline,
+button[type="submit"] {
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn-ghost:hover,
+button[type="submit"]:hover {
+  background-color: #58c4e8;
+  color: #101820;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(88, 196, 232, 0.3);
+}
+
+.btn:active,
+.btn-ghost:active,
+button[type="submit"]:active {
+  transform: scale(0.96);
+  box-shadow: none;
+}
+
+main a:not(.btn):not(.btn-ghost):not(.link-underline) {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+main a:not(.btn):not(.btn-ghost):not(.link-underline):hover {
+  color: #58c4e8;
+  text-decoration: underline;
+}
+
+main a:active {
+  opacity: 0.7;
+}
+
+/* Apie mane puslapio mygtukai */
+
+.about .cta-group .btn-ghost,
+.about .cta-group .link-underline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 25px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about .cta-group .btn-ghost {
+  background: #176b91;
+  color: #ffffff;
+  border: 2px solid #58c4e8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.about .cta-group .link-underline {
+  background: transparent;
+  color: #58c4e8;
+  border: 2px solid #58c4e8;
+}
+
+.about .cta-group .btn-ghost:hover,
+.about .cta-group .link-underline:hover {
+  background: #58c4e8;
+  color: #101820;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(88, 196, 232, 0.35);
+}
+
+.about .cta-group .btn-ghost:active,
+.about .cta-group .link-underline:active {
+  transform: scale(0.95);
+}
+
+/* 3. SEKCIJU TARPAI IR TURINIO BLOKAI */
+
+/* Apie mane */
+
+.about-page #about {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.about-page .intro-content {
+  padding: 30px;
+  border: 1px solid rgba(88, 196, 232, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-page .profile-photo {
+  border-radius: 24px;
+  border: 3px solid #58c4e8;
+  box-shadow: 0 10px 30px rgba(88, 196, 232, 0.25);
+}
+
+/* Patirtis */
+
+.resume-page #resume {
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+
+.resume-page .resume-item,
+.resume-page .resume-block {
+  margin-bottom: 30px;
+  padding: 25px;
+  border: 1px solid rgba(88, 196, 232, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Projektai */
+
+.portfolio-page #portfolio {
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+
+.portfolio-page .portfolio-item {
+  margin-bottom: 25px;
+  padding: 12px;
+  border: 1px solid rgba(88, 196, 232, 0.4);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.portfolio-page .portfolio-item img {
+  border-radius: 12px;
+}
+
+/* 4. NAVIGACIJOS JUOSTA */
+
+.header {
+  border-bottom: 2px solid #58c4e8;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navmenu a {
+  border-radius: 10px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .navmenu a:hover,
+  .navmenu a.active {
+    background-color: #176b91;
+    color: #ffffff !important;
+    border-radius: 10px;
+  }
+}
+
+/* 5. IGUDZIU PROGRESO JUOSTOS */
+
+.skills .progress {
+  height: 14px;
+  background-color: #243746;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #58c4e8;
+}
+
+.skills .progress-bar {
+  background: linear-gradient(90deg, #176b91, #58c4e8);
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(88, 196, 232, 0.4);
+}
+
+/* ==========================================
+   PAPILDOMA UZDUOTIS - SARASAI IR LENTELE
+   ========================================== */
+
+/* 6. NENUMERUOTAS SARASAS */
+
+.services-page main ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.services-page main ul > li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 22px;
+}
+
+.services-page main ul > li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #58c4e8;
+  font-size: 13px;
+}
+
+/* 7. NUMERUOTAS SARASAS */
+
+.services-page main ol {
+  list-style: none;
+  counter-reset: zingsniai;
+  padding-left: 0;
+}
+
+.services-page main ol > li {
+  counter-increment: zingsniai;
+  position: relative;
+  padding: 12px 15px 12px 55px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background-color: rgba(88, 196, 232, 0.08);
+}
+
+.services-page main ol > li::before {
+  content: counter(zingsniai);
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  background-color: #176b91;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+/* 8. IDETINIS SARASAS */
+
+.services-page main ul ul {
+  margin-top: 10px;
+  padding-left: 15px;
+  border-left: 2px solid #58c4e8;
+}
+
+.services-page main ul ul > li::before {
+  content: "➜";
+  color: #f4b860;
+}
+
+/* 9. LENTELES STILIUS */
+
+.services-page main table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #58c4e8;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.services-page main table thead th {
+  background-color: #176b91;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px;
+  border-color: #58c4e8;
+}
+
+.services-page main table td {
+  padding: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border-color: rgba(88, 196, 232, 0.3);
+}
+
+.services-page main table tbody tr:nth-child(odd) td {
+  background-color: #192b36;
+  color: #ffffff;
+}
+
+.services-page main table tbody tr:nth-child(even) td {
+  background-color: #243746;
+  color: #ffffff;
+}
+
+.services-page main table tbody tr:hover td {
+  background-color: #176b91;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+/* 10. TEKSTO IR FONO KONTRASTAS */
+
+.services-page main h3,
+.services-page main h4 {
+  color: #58c4e8;
+}
+
+.services-page main table,
+.services-page main li {
+  line-height: 1.7;
+}
+
+/* 11. PRITAIKYMAS TELEFONAMS */
+
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 23px; }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .about-page .intro-content {
+    padding: 20px;
+  }
+
+  .resume-page .resume-item,
+  .resume-page .resume-block {
+    padding: 18px;
+  }
+
+  .portfolio-page .portfolio-item {
+    padding: 8px;
+  }
+
+  .services-page main table th,
+  .services-page main table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
